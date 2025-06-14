@@ -22,7 +22,7 @@ mkdir -p "$ROOT_CA_DIR" || { echo "ERROR: Failed to create '$ROOT_CA_DIR'. Exiti
 mkdir -p "$DOMAIN_CERT_DIR" || { echo "ERROR: Failed to create '$DOMAIN_CERT_DIR'. Exiting..."; exit 1; }
 
 ### Prompt for domain name
-read -p "Enter domain name (e.g., example.com or *.apps.example.com): " DOMAIN
+read -p "Enter domain name (e.g., example.com or *.apps.{cluster_name}.example.com): " DOMAIN
 if [ -z "$DOMAIN" ]; then
     echo "No domain provided. Using default: example.com"
     DOMAIN="example.com"
